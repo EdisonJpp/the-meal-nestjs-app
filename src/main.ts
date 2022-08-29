@@ -12,13 +12,14 @@ async function bootstrap() {
   );
 
   app.enableCors({
-    origin: ['http://localhost:3000'],
+    origin: ['http://localhost:3000', 'https://the-meal-next-app.vercel.app'],
     methods: ['POST', 'PUT', 'DELETE', 'GET'],
     allowedHeaders: [
       'Accept',
       'Content-Type',
       'Access-Control-Allow-Credentials',
       'X-Requested-With',
+      'Access-Control-Allow-Origin',
     ],
     credentials: true,
   });
